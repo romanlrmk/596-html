@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+:root {
+  font-family: "DotGothic16", sans-serif;
+  --main-color: black;
+  --accent-color: rgb(50, 206, 211);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-width: 980px;
+  margin: auto;
+}
+
+.heading .logo,
+header .banner h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.heading nav a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.heading nav a:hover {
+  font-weight: bold;
+}
+
+@media (min-width: 400px) {
+  .heading {
+    display: flex;
+  }
+
+  .heading nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+header .banner {
+  background-image: url(../img/Astronaut.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header .banner h1 {
+  color: var(--accent-color);
+}
+
+.button {
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  transition: color 0.7s;
+  background-color: transparent;
+}
+
+.button:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.card-button {
+  border-color: black;
+  color: black;
+}
+
+.card-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.product-list article {
+  border: 1px solid var(--main-color);
+}
+
+.product-list article img {
+  display: block;
+  width: 100%;
+}
+
+.product-list article div {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 600px) {
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+}
+
+@media (min-width: 900px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 980px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
